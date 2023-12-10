@@ -1,7 +1,7 @@
 namespace RaylibExamples.Core
 
 open System
-open Raylib_cs
+open type Raylib_cs.Raylib
 
 module basicWindow =
 
@@ -10,17 +10,17 @@ module basicWindow =
         let screenWidth = 800
         let screenHeight = 450
 
-        Raylib.InitWindow(screenWidth, screenHeight, "Window Title")
+        InitWindow(screenWidth, screenHeight, "Window Title")
 
-        Raylib.SetTargetFPS(60)
+        SetTargetFPS(60)
 
-        while not (Raylib.WindowShouldClose()) do
+        while not (WindowShouldClose()) do
 
-            Raylib.BeginDrawing()
-            Raylib.ClearBackground(Color.RAYWHITE)
+            BeginDrawing()
+            ClearBackground(Raylib_cs.Color.RAYWHITE)
 
-            Raylib.DrawText("I will not say hello world for the 100th time", 190, 200, 20, Color.MAGENTA)
+            DrawText("I will not say hello world for the 100th time", 190, 200, 20, Raylib_cs.Color.MAGENTA)
 
-            Raylib.EndDrawing()
+            EndDrawing()
 
-        Raylib.CloseWindow()
+        CloseWindow()

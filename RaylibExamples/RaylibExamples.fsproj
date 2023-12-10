@@ -8,6 +8,7 @@
   <ItemGroup>
     <Compile Include="./Core/BasicWindow.fs"/>
     <Compile Include="./Core/BasicGreenScreen.fs"/>
+    <Compile Include="./Core/Camera2dDemo.fs"/>
     <Compile Include="Program.fs" />
     </ItemGroup>
 
