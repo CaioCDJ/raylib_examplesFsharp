@@ -9,6 +9,11 @@
     <Compile Include="./Core/BasicWindow.fs"/>
     <Compile Include="./Core/BasicGreenScreen.fs"/>
     <Compile Include="./Core/Camera2dDemo.fs"/>
+    <!-- <Compile Include="./Core/Camera2dMouseZoom.fs"/> -->
+    <Compile Include="./Core/Free3dCamera.fs"/>
+    <Compile Include="./Core/InputKeys.fs"/>
+    <Compile Include="./Core/InputMouse.fs"/>
+    <Compile Include="./Core/3dCameraMode.fs"/>
     <Compile Include="Program.fs" />
     </ItemGroup>
 
