@@ -5,4 +5,6 @@ open RaylibExamples.Core
 // BasicScreenManager.Main()
 // BasicGeenScreen.run()
 // Camera2dDemo.run ()
-InputMouse.run
+// InputMouse.run
+
+CameraSpit2d.run 
