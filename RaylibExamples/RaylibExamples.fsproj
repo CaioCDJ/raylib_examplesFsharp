@@ -15,6 +15,10 @@
     <Compile Include="./Core/InputMouse.fs"/>
     <Compile Include="./Core/3dCameraMode.fs"/>
     <Compile Include="./Core/2dCameraSplit.fs"/>
+    
+    <Compile Include="./Shapes/BasicShapes.fs"/>
+    <Compile Include="./Shapes/BouncingBall.fs"/>
+
     <Compile Include="Program.fs" />
     </ItemGroup>
 
