@@ -18,7 +18,10 @@
     
     <Compile Include="./Shapes/BasicShapes.fs"/>
     <Compile Include="./Shapes/BouncingBall.fs"/>
-
+    <Compile Include="./Shapes/ColorsPalette.fs"/>
+    <Compile Include="./Shapes/RaylibLogo.fs"/>
+    <Compile Include="./Shapes/LinesBezier.fs"/>
+    
     <Compile Include="Program.fs" />
     </ItemGroup>
 
