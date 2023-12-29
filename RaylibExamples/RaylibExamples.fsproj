@@ -6,27 +6,28 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Include="./Core/BasicWindow.fs"/>
-    <Compile Include="./Core/BasicGreenScreen.fs"/>
-    <Compile Include="./Core/Camera2dDemo.fs"/>
+    <Compile Include="./Core/BasicWindow.fs" />
+    <Compile Include="./Core/BasicGreenScreen.fs" />
+    <Compile Include="./Core/Camera2dDemo.fs" />
     <!-- <Compile Include="./Core/Camera2dMouseZoom.fs"/> -->
-    <Compile Include="./Core/Free3dCamera.fs"/>
-    <Compile Include="./Core/InputKeys.fs"/>
-    <Compile Include="./Core/InputMouse.fs"/>
-    <Compile Include="./Core/3dCameraMode.fs"/>
-    <Compile Include="./Core/2dCameraSplit.fs"/>
+    <Compile Include="./Core/Free3dCamera.fs" />
+    <Compile Include="./Core/InputKeys.fs" />
+    <Compile Include="./Core/InputMouse.fs" />
+    <Compile Include="./Core/3dCameraMode.fs" />
+    <Compile Include="./Core/2dCameraSplit.fs" />
     
-    <Compile Include="./Shapes/BasicShapes.fs"/>
-    <Compile Include="./Shapes/BouncingBall.fs"/>
-    <Compile Include="./Shapes/ColorsPalette.fs"/>
-    <Compile Include="./Shapes/RaylibLogo.fs"/>
-    <Compile Include="./Shapes/LinesBezier.fs"/>
-    
+    <Compile Include="./Shapes/BasicShapes.fs" />
+    <Compile Include="./Shapes/BouncingBall.fs" />
+    <Compile Include="./Shapes/ColorsPalette.fs" />
+    <Compile Include="./Shapes/RaylibLogo.fs" />
+    <Compile Include="./Shapes/LinesBezier.fs" />
+   
     <Compile Include="Program.fs" />
     </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Raylib-cs" Version="5.0.0" />
+    <PackageReference Include="Spectre.Console" Version="0.48.0" />
   </ItemGroup>
 
 
