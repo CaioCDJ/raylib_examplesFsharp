@@ -15,12 +15,15 @@
     <Compile Include="./Core/InputMouse.fs" />
     <Compile Include="./Core/3dCameraMode.fs" />
     <Compile Include="./Core/2dCameraSplit.fs" />
+    <Compile Include="./Core/InputMultitouch.fs" />
     
     <Compile Include="./Shapes/BasicShapes.fs" />
     <Compile Include="./Shapes/BouncingBall.fs" />
     <Compile Include="./Shapes/ColorsPalette.fs" />
     <Compile Include="./Shapes/RaylibLogo.fs" />
+    <Compile Include="./Shapes/RaylibLogoAnimation.fs" />
     <Compile Include="./Shapes/LinesBezier.fs" />
+    <Compile Include="./Shapes/RetangleScaling.fs" />
    
     <Compile Include="Program.fs" />
     </ItemGroup>
