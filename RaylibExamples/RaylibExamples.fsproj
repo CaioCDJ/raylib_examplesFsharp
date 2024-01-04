@@ -24,6 +24,8 @@
     <Compile Include="./Shapes/RaylibLogoAnimation.fs" />
     <Compile Include="./Shapes/LinesBezier.fs" />
     <Compile Include="./Shapes/RetangleScaling.fs" />
+    <Compile Include="./Shapes/CollisionArea.fs" />
+    <Compile Include="./Shapes/FollowingEyes.fs" />
    
     <Compile Include="Program.fs" />
     </ItemGroup>

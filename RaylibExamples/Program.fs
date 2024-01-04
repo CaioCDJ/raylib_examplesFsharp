@@ -56,8 +56,10 @@ let main Void =
                        "Raylib Logo"
                        "Raylib Logo Animations"
                        "colors Palette"
+                       "Rectangle Scaling"
                        "lines bezier"
-                       "Rectangle Scaling" |]
+                       "Collision Area" 
+                       "Following Eyes"|]
                 )
 
             match example with
@@ -68,6 +70,8 @@ let main Void =
             | "Raylib Logo Animations" -> RaylibExamples.Shapes.RayliblogoAnimation.run
             | "Rectangle Scaling" -> RaylibExamples.Shapes.RetangleScaling.run
             | "lines bezier" -> RaylibExamples.Shapes.LinesBezier.run
+            | "Collision Area" -> RaylibExamples.Shapes.CollisionArea.run
+            |"Following Eyes" -> RaylibExamples.Shapes.FollowingEyes.run 
             | _ -> ()
         | _ -> ()
 
