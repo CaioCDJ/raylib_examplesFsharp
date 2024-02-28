@@ -26,12 +26,16 @@
     <Compile Include="./Shapes/RetangleScaling.fs" />
     <Compile Include="./Shapes/CollisionArea.fs" />
     <Compile Include="./Shapes/FollowingEyes.fs" />
+    <Compile Include="./Shapes/EasingsBall.fs" />
    
+  
+  
+    <Compile Include="./Shared/Easings.fs" />
     <Compile Include="Program.fs" />
     </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Raylib-cs" Version="5.0.0" />
+    <PackageReference Include="Raylib-cs" Version="6.0.0" />
     <PackageReference Include="Spectre.Console" Version="0.48.0" />
   </ItemGroup>
 

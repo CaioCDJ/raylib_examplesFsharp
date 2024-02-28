@@ -17,27 +17,27 @@ module ColorsPalette =
         InitWindow(screenWidth, screenHeight, "raylib [shapes] example - colors palette")
 
         let colors =
-            [| Color.DARKGRAY
-               Color.MAROON
-               Color.ORANGE
-               Color.DARKGREEN
-               Color.DARKBLUE
-               Color.DARKPURPLE
-               Color.DARKBROWN
-               Color.GRAY
-               Color.RED
-               Color.GOLD
-               Color.LIME
-               Color.BLUE
-               Color.VIOLET
-               Color.BROWN
-               Color.LIGHTGRAY
-               Color.PINK
-               Color.YELLOW
-               Color.GREEN
-               Color.SKYBLUE
-               Color.PURPLE
-               Color.BEIGE |]
+            [| Color.DarkGray
+               Color.Maroon
+               Color.Orange
+               Color.DarkGreen
+               Color.DarkBlue
+               Color.DarkPurple
+               Color.DarkBrown
+               Color.Gray
+               Color.Red
+               Color.Gold
+               Color.Lime
+               Color.Blue
+               Color.Violet
+               Color.Brown
+               Color.LightGray
+               Color.Pink
+               Color.Yellow
+               Color.Green
+               Color.SkyBlue
+               Color.Purple
+               Color.Beige |]
 
         let colorsName =
             [| "DARKGRAY"
@@ -89,22 +89,22 @@ module ColorsPalette =
 
             BeginDrawing()
 
-            DrawText("raylib colors palette", 28, 42, 20, Color.BLACK)
-            DrawText("press SPACE to see all colors", GetScreenWidth() - 180, GetScreenHeight() - 40, 10, Color.GRAY)
+            DrawText("raylib colors palette", 28, 42, 20, Color.Black)
+            DrawText("press SPACE to see all colors", GetScreenWidth() - 180, GetScreenHeight() - 40, 10, Color.Gray)
 
             for i in 0 .. MAX_COLORS_COUNT - 1 do
                 DrawRectangleRec(colorsRecs[i], Fade(colors.[i], (if colorsSlate.[i] <> 0 then 0.6f else 1.0f)))
 
-                if not (not (IsKeyDown(KeyboardKey.KEY_SPACE))) || colorsSlate.[i] <> 0 then
+                if not (not (IsKeyDown(KeyboardKey.Space))) || colorsSlate.[i] <> 0 then
                     DrawRectangle(
                         int colorsRecs.[i].X,
                         int (colorsRecs.[i].Y + colorsRecs.[i].Height - 26.0f),
                         int colorsRecs.[i].Width,
                         20,
-                        Color.BLACK
+                        Color.Black
                     )
 
-                    DrawRectangleLinesEx(colorsRecs.[i], 6f, Fade(Color.BLACK, 0.3f))
+                    DrawRectangleLinesEx(colorsRecs.[i], 6f, Fade(Color.Black, 0.3f))
 
                     DrawText(
                         colorsName.[i],
@@ -117,7 +117,6 @@ module ColorsPalette =
                         10,
                         colors.[i]
                     )
-
 
             EndDrawing()
 

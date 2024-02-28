@@ -65,7 +65,7 @@ module RayliblogoAnimation =
                         alpha <- 0.0f
                         state <- 4
             | 4 ->
-                if not (not (IsKeyPressed(KeyboardKey.KEY_R))) then
+                if not (not (IsKeyPressed(KeyboardKey.R))) then
                     frameCounter <- 0
                     lettersCount <- 0
                     topSideRecWitdh <- 16
@@ -77,46 +77,46 @@ module RayliblogoAnimation =
 
             BeginDrawing()
 
-            ClearBackground(Color.RAYWHITE)
+            ClearBackground(Color.RayWhite)
 
             match state with
             | 0 ->
                 if (frameCounter / 15 % 2) <> 0 then
-                    DrawRectangle(logoPositionX, logoPositionY, 16, 16, Color.BLACK)
+                    DrawRectangle(logoPositionX, logoPositionY, 16, 16, Color.Black)
             | 1 ->
-                DrawRectangle(logoPositionX, logoPositionY, topSideRecWitdh, 16, Color.BLACK)
-                DrawRectangle(logoPositionX, logoPositionY, 16, leftSideRecHeight, Color.BLACK)
+                DrawRectangle(logoPositionX, logoPositionY, topSideRecWitdh, 16, Color.Black)
+                DrawRectangle(logoPositionX, logoPositionY, 16, leftSideRecHeight, Color.Black)
             | 2 ->
-                DrawRectangle(logoPositionX, logoPositionY, topSideRecWitdh, 16, Color.BLACK)
-                DrawRectangle(logoPositionX, logoPositionY, 16, leftSideRecHeight, Color.BLACK)
+                DrawRectangle(logoPositionX, logoPositionY, topSideRecWitdh, 16, Color.Black)
+                DrawRectangle(logoPositionX, logoPositionY, 16, leftSideRecHeight, Color.Black)
 
-                DrawRectangle(logoPositionX + 240, logoPositionY, 16, rightSideRecHeight, Color.BLACK)
-                DrawRectangle(logoPositionX, logoPositionY + 240, bottomSideRecWitdh, 16, Color.BLACK)
+                DrawRectangle(logoPositionX + 240, logoPositionY, 16, rightSideRecHeight, Color.Black)
+                DrawRectangle(logoPositionX, logoPositionY + 240, bottomSideRecWitdh, 16, Color.Black)
             | 3 ->
-                DrawRectangle(logoPositionX, logoPositionY, topSideRecWitdh, 16, Fade(Color.BLACK, alpha))
-                DrawRectangle(logoPositionX, logoPositionY + 16, 16, leftSideRecHeight - 32, Fade(Color.BLACK, alpha))
+                DrawRectangle(logoPositionX, logoPositionY, topSideRecWitdh, 16, Fade(Color.Black, alpha))
+                DrawRectangle(logoPositionX, logoPositionY + 16, 16, leftSideRecHeight - 32, Fade(Color.Black, alpha))
 
                 DrawRectangle(
                     logoPositionX + 240,
                     logoPositionY + 16,
                     16,
                     rightSideRecHeight - 32,
-                    Fade(Color.BLACK, alpha)
+                    Fade(Color.Black, alpha)
                 )
 
-                DrawRectangle(logoPositionX, logoPositionY + 240, bottomSideRecWitdh, 16, Fade(Color.BLACK, alpha))
+                DrawRectangle(logoPositionX, logoPositionY + 240, bottomSideRecWitdh, 16, Fade(Color.Black, alpha))
 
                 DrawRectangle(
                     GetScreenWidth() / 2 - 112,
                     GetScreenHeight() / 2 - 112,
                     224,
                     224,
-                    Fade(Color.RAYWHITE, alpha)
+                    Fade(Color.RayWhite, alpha)
                 )
 
-                DrawText("Raylib", GetScreenWidth() / 2 - 44, GetScreenHeight() / 2 + 48, 50, Fade(Color.BLACK, alpha))
+                DrawText("Raylib", GetScreenWidth() / 2 - 44, GetScreenHeight() / 2 + 48, 50, Fade(Color.Black, alpha))
 
-            | 4 -> DrawText("[R] REPLAY", 340, 200, 20, Color.GRAY)
+            | 4 -> DrawText("[R] REPLAY", 340, 200, 20, Color.Gray)
 
             EndDrawing()
 

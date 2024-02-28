@@ -12,7 +12,7 @@ module BouncingBall =
         let screenWidth = 800
         let screenHeight = 450
 
-        SetConfigFlags(ConfigFlags.FLAG_MSAA_4X_HINT)
+        SetConfigFlags(ConfigFlags.Msaa4xHint)
         InitWindow(screenWidth, screenHeight, "raylib [shapes] example - bouncing ball")
 
         let mutable ballPosition =
@@ -28,7 +28,7 @@ module BouncingBall =
         SetTargetFPS(60)
 
         while not (WindowShouldClose()) do
-            if not (not (IsKeyPressed(KeyboardKey.KEY_SPACE))) then
+            if not (not (IsKeyPressed(KeyboardKey.Space))) then
                 pause <- not pause
 
             if not pause then
@@ -52,12 +52,12 @@ module BouncingBall =
 
             BeginDrawing()
 
-            ClearBackground(Color.RAYWHITE)
+            ClearBackground(Color.RayWhite)
 
-            DrawCircleV(ballPosition, float32 (ballRadius), Color.MAROON)
+            DrawCircleV(ballPosition, float32 (ballRadius), Color.Maroon)
 
             if pause && (0 = (frameCounter / 30) % 2) then
-                DrawText("PAUSED", 350, 200, 30, Color.GRAY)
+                DrawText("PAUSED", 350, 200, 30, Color.Gray)
 
             EndDrawing()
 

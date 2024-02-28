@@ -46,16 +46,16 @@ module Camera2dDemo =
 
         while not (WindowShouldClose()) do
 
-            if not (not (IsKeyDown(KeyboardKey.KEY_RIGHT))) then
+            if not (not (IsKeyDown(KeyboardKey.Right))) then
                 player.X <- player.X + 2.0f
-            elif not (not (IsKeyDown(KeyboardKey.KEY_LEFT))) then
+            elif not (not (IsKeyDown(KeyboardKey.Left))) then
                 player.X <- player.X - 2.0f
 
             camera.Target <- System.Numerics.Vector2(player.X + 20.0f, player.Y + 20.0f)
 
-            if not (not (IsKeyDown(KeyboardKey.KEY_A))) then
+            if not (not (IsKeyDown(KeyboardKey.A))) then
                 camera.Rotation <- camera.Rotation + 1.0f
-            elif not (not (IsKeyDown(KeyboardKey.KEY_S))) then
+            elif not (not (IsKeyDown(KeyboardKey.S))) then
                 camera.Rotation <- camera.Rotation - 1.0f
 
             match camera.Rotation with
@@ -74,53 +74,53 @@ module Camera2dDemo =
             else if camera.Zoom < 0.1f then
                 camera.Zoom <- 0.1f
 
-            if not (not (IsKeyDown(KeyboardKey.KEY_R))) then
+            if not (not (IsKeyDown(KeyboardKey.R))) then
                 camera.Zoom <- 1.0f
                 camera.Zoom <- 0.0f
 
             BeginDrawing()
 
-            ClearBackground(Color.BLACK)
+            ClearBackground(Color.Black)
 
             BeginMode2D(camera)
 
-            DrawRectangle(-6000, 320, 13000, 800, Color.DARKGRAY)
+            DrawRectangle(-6000, 320, 13000, 800, Color.DarkGray)
 
             for i in 0 .. (MaxBuilldings - 1) do
                 printfn "%d" i
                 DrawRectangleRec(buildings.[i], buildColors.[i])
 
-            DrawRectangleRec(player, Color.RED)
+            DrawRectangleRec(player, Color.Red)
 
             // DrawRectangle(int (camera.Target.X, -500, 1, int (screenHeight * 4), Color.GREEN))
-            DrawRectangle(int (camera.Target.X), -500, 1, int (screenHeight * 4), Color.GREEN)
+            DrawRectangle(int (camera.Target.X), -500, 1, int (screenHeight * 4), Color.Green)
 
             DrawLine(
                 int (-screenWidth * 10),
                 int (camera.Target.Y),
                 int (screenWidth * 10),
                 int camera.Target.Y,
-                Color.GREEN
+                Color.Green
             )
 
             EndMode2D()
 
-            DrawText("SCREEN AREA", 640, 10, 20, Color.RED)
+            DrawText("SCREEN AREA", 640, 10, 20, Color.Red)
 
-            DrawRectangle(0, 0, int (screenWidth), 5, Color.RED)
+            DrawRectangle(0, 0, int (screenWidth), 5, Color.Red)
 
-            DrawRectangle(0, 0, screenWidth, 5, Color.RED)
-            DrawRectangle(0, 5, 5, screenHeight - 10, Color.RED)
-            DrawRectangle(screenWidth - 5, 5, 5, screenHeight - 10, Color.RED)
-            DrawRectangle(0, screenHeight - 5, screenWidth, 5, Color.RED)
+            DrawRectangle(0, 0, screenWidth, 5, Color.Red)
+            DrawRectangle(0, 5, 5, screenHeight - 10, Color.Red)
+            DrawRectangle(screenWidth - 5, 5, 5, screenHeight - 10, Color.Red)
+            DrawRectangle(0, screenHeight - 5, screenWidth, 5, Color.Red)
 
-            DrawRectangle(10, 10, 250, 113, ColorAlpha(Color.SKYBLUE, 0.5f))
-            DrawRectangleLines(10, 10, 250, 113, Color.BLUE)
+            DrawRectangle(10, 10, 250, 113, ColorAlpha(Color.SkyBlue, 0.5f))
+            DrawRectangleLines(10, 10, 250, 113, Color.Blue)
 
-            DrawText("Free 2d camera controls:", 20, 20, 10, Color.BLACK)
-            DrawText("- Right/Left to move Offset", 40, 40, 10, Color.DARKGRAY)
-            DrawText("- Mouse Wheel to Zoom in-out", 40, 60, 10, Color.DARKGRAY)
-            DrawText("- A / S to Rotate", 40, 80, 10, Color.DARKGRAY)
-            DrawText("- R to reset Zoom and Rotation", 40, 100, 10, Color.DARKGRAY)
+            DrawText("Free 2d camera controls:", 20, 20, 10, Color.Black)
+            DrawText("- Right/Left to move Offset", 40, 40, 10, Color.DarkGray)
+            DrawText("- Mouse Wheel to Zoom in-out", 40, 60, 10, Color.DarkGray)
+            DrawText("- A / S to Rotate", 40, 80, 10, Color.DarkGray)
+            DrawText("- R to reset Zoom and Rotation", 40, 100, 10, Color.DarkGray)
 
             EndDrawing()

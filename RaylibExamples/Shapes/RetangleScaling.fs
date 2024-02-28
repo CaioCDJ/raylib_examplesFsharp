@@ -44,7 +44,7 @@ module RetangleScaling =
             then
                 mouseScaleReady <- true
 
-                if not (not (IsMouseButtonPressed(MouseButton.MOUSE_BUTTON_LEFT))) then
+                if not (not (IsMouseButtonPressed(MouseButton.Left))) then
                     mouseScaleMode <- true
             else
                 mouseScaleReady <- false
@@ -67,26 +67,26 @@ module RetangleScaling =
                 if rectangle.Height > float32 (GetScreenHeight()) - rectangle.Y then
                     rectangle.Height <- float32 (GetScreenHeight()) - rectangle.Y
 
-                if not (not (IsMouseButtonReleased(MouseButton.MOUSE_BUTTON_LEFT))) then
+                if not (not (IsMouseButtonReleased(MouseButton.Left))) then
                     mouseScaleMode <- false
 
 
             BeginDrawing()
 
-            ClearBackground(Color.RAYWHITE)
+            ClearBackground(Color.RayWhite)
 
-            DrawText("Scale rectangle dragging from bottom-right corner!", 10, 10, 20, Color.GRAY)
+            DrawText("Scale rectangle dragging from bottom-right corner!", 10, 10, 20, Color.Gray)
 
-            DrawRectangleRec(rectangle, Fade(Color.GREEN, 0.5f))
+            DrawRectangleRec(rectangle, Fade(Color.Green, 0.5f))
 
             if mouseScaleReady then
-                DrawRectangleLinesEx(rectangle, 1f, Color.RED)
+                DrawRectangleLinesEx(rectangle, 1f, Color.Red)
 
                 DrawTriangle(
                     Vector2((rectangle.X + rectangle.Width - MOUSE_SCALE_MARK_SIZE), (rectangle.Y + rectangle.Height)),
                     Vector2((rectangle.X + rectangle.Width), (rectangle.Y + rectangle.Height)),
                     Vector2((rectangle.X + rectangle.Width), (rectangle.Y + rectangle.Height - MOUSE_SCALE_MARK_SIZE)),
-                    Color.RED
+                    Color.Red
                 )
 
             EndDrawing()

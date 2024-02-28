@@ -16,7 +16,7 @@ module CameraMode3d =
                 Vector3(0.0f, 0.0f, 0.0f),
                 Vector3(0.0f, 1.0f, 0.0f),
                 45.0f,
-                CameraProjection.CAMERA_PERSPECTIVE
+                CameraProjection.Perspective
             )
 
         let cubePosition = Vector3(0.0f, 0.0f, 0.0f)
@@ -25,16 +25,16 @@ module CameraMode3d =
 
         while not (WindowShouldClose()) do
             BeginDrawing()
-            ClearBackground(Color.RAYWHITE)
+            ClearBackground(Color.RayWhite)
             BeginMode3D(camera)
 
-            DrawCube(cubePosition, 2.0f, 2.0f, 2.0f, Color.RED)
-            DrawCubeWires(cubePosition, 2.0f, 2.0f, 2.0f, Color.MAROON)
+            DrawCube(cubePosition, 2.0f, 2.0f, 2.0f, Color.Red)
+            DrawCubeWires(cubePosition, 2.0f, 2.0f, 2.0f, Color.Maroon)
 
             DrawGrid(10, 1.0f)
             EndMode3D()
 
-            DrawText("Welcome to the third dimension!", 10, 40, 20, Color.DARKGRAY)
+            DrawText("Welcome to the third dimension!", 10, 40, 20, Color.DarkGray)
 
             DrawFPS(10, 10)
 

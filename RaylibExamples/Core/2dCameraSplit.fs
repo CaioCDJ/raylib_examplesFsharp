@@ -39,24 +39,24 @@ module CameraSpit2d =
         while not (WindowShouldClose()) do
 
             // ASWD Keyboard control
-            if not (not (IsKeyDown(KeyboardKey.KEY_S))) then
+            if not (not (IsKeyDown(KeyboardKey.S))) then
                 player1.Y <- player1.Y + 3.0f
-            else if not (not (IsKeyDown(KeyboardKey.KEY_W))) then
+            else if not (not (IsKeyDown(KeyboardKey.W))) then
                 player1.Y <- player1.Y - 3.0f
 
-            if not (not (IsKeyDown(KeyboardKey.KEY_D))) then
+            if not (not (IsKeyDown(KeyboardKey.D))) then
                 player1.X <- player1.X + 3.0f
-            else if not (not (IsKeyDown(KeyboardKey.KEY_A))) then
+            else if not (not (IsKeyDown(KeyboardKey.A))) then
                 player1.X <- player1.X - 3.0f
 
-            if not (not (IsKeyDown(KeyboardKey.KEY_UP))) then
+            if not (not (IsKeyDown(KeyboardKey.Up))) then
                 player2.Y <- player2.Y - 3.0f
-            else if not (not (IsKeyDown(KeyboardKey.KEY_DOWN))) then
+            else if not (not (IsKeyDown(KeyboardKey.Down))) then
                 player2.Y <- player2.Y + 3.0f
 
-            if not (not (IsKeyDown(KeyboardKey.KEY_RIGHT))) then
+            if not (not (IsKeyDown(KeyboardKey.Right))) then
                 player2.X <- player2.X + 3.0f
-            else if not (not (IsKeyDown(KeyboardKey.KEY_LEFT))) then
+            else if not (not (IsKeyDown(KeyboardKey.Left))) then
                 player2.X <- player2.X - 3.0f
 
             camera1.Target <- Vector2(player1.X, player1.Y)
@@ -66,7 +66,7 @@ module CameraSpit2d =
             //----------------------------------------------------------------------------------
 
             BeginTextureMode(screenCamera1)
-            ClearBackground(Color.RAYWHITE)
+            ClearBackground(Color.RayWhite)
 
             BeginMode2D(camera1)
 
@@ -75,32 +75,31 @@ module CameraSpit2d =
                 DrawLineV(
                     Vector2(float32 (PLAYER_SIZE * float32 (i)), 0f),
                     Vector2(float32 (PLAYER_SIZE * float32 (i)), float32 (screenHeight)),
-                    Color.LIGHTGRAY
+                    Color.LightGray
                 )
 
             for i in 0 .. screenHeight / int (PLAYER_SIZE) + 1 do
                 DrawLineV(
                     Vector2(0f, float32 (PLAYER_SIZE * float32 (i))),
                     Vector2(float32 (screenWidth), float32 (PLAYER_SIZE * float32 (i))),
-                    Color.LIGHTGRAY
+                    Color.LightGray
                 )
 
             for i in 0 .. screenWidth / int (PLAYER_SIZE) do
                 for j in 0 .. screenHeight / int (PLAYER_SIZE) do
-                    DrawText($"{i},{j}", 10 + int (PLAYER_SIZE) * i, 15 + int (PLAYER_SIZE) * j, 10, Color.LIGHTGRAY)
+                    DrawText($"{i},{j}", 10 + int (PLAYER_SIZE) * i, 15 + int (PLAYER_SIZE) * j, 10, Color.LightGray)
 
-
-            DrawRectangleRec(player1, Color.RED)
-            DrawRectangleRec(player2, Color.BLUE)
+            DrawRectangleRec(player1, Color.Red)
+            DrawRectangleRec(player2, Color.Blue)
             EndMode2D()
 
-            DrawRectangle(0, 0, GetScreenWidth() / 2, 30, Fade(Color.RAYWHITE, 0.0f))
-            DrawText("PLAYER1: W/S/A/D to move", 10, 10, 10, Color.MAROON)
+            DrawRectangle(0, 0, GetScreenWidth() / 2, 30, Fade(Color.RayWhite, 0.0f))
+            DrawText("PLAYER1: W/S/A/D to move", 10, 10, 10, Color.Maroon)
 
             EndTextureMode()
 
             BeginTextureMode(screenCamera2)
-            ClearBackground(Color.RAYWHITE)
+            ClearBackground(Color.RayWhite)
 
             BeginMode2D(camera2)
 
@@ -108,44 +107,44 @@ module CameraSpit2d =
                 DrawLineV(
                     Vector2(float32 (PLAYER_SIZE * float32 (i)), 0f),
                     Vector2(float32 (PLAYER_SIZE * float32 (i)), float32 (screenHeight)),
-                    Color.LIGHTGRAY
+                    Color.LightGray
                 )
 
             for i in 0 .. screenHeight / int (PLAYER_SIZE) + 1 do
                 DrawLineV(
                     Vector2(0f, float32 (PLAYER_SIZE * float32 (i))),
                     Vector2(float32 (screenWidth), float32 (PLAYER_SIZE * float32 (i))),
-                    Color.LIGHTGRAY
+                    Color.LightGray
                 )
 
             for i in 0 .. screenWidth / int (PLAYER_SIZE) do
                 for j in 0 .. screenHeight / int (PLAYER_SIZE) do
-                    DrawText($"{i},{j}", 10 + int (PLAYER_SIZE) * i, 15 + int (PLAYER_SIZE) * j, 10, Color.LIGHTGRAY)
+                    DrawText($"{i},{j}", 10 + int (PLAYER_SIZE) * i, 15 + int (PLAYER_SIZE) * j, 10, Color.LightGray)
 
-            DrawRectangleRec(player1, Color.RED)
-            DrawRectangleRec(player2, Color.BLUE)
+            DrawRectangleRec(player1, Color.Red)
+            DrawRectangleRec(player2, Color.Blue)
 
             EndMode2D()
 
-            DrawRectangle(0, 0, GetScreenWidth() / 2, 30, Fade(Color.RAYWHITE, 0.6f))
-            DrawText("PLAYER2: UP/DOWN/LEFT/RIGHT to move", 10, 10, 10, Color.DARKBLUE)
+            DrawRectangle(0, 0, GetScreenWidth() / 2, 30, Fade(Color.RayWhite, 0.6f))
+            DrawText("PLAYER2: UP/DOWN/LEFT/RIGHT to move", 10, 10, 10, Color.DarkBlue)
 
             EndTextureMode()
 
             BeginDrawing()
 
-            ClearBackground(Color.BLACK)
+            ClearBackground(Color.Black)
 
-            DrawTextureRec(screenCamera1.Texture, splitScreenRect, Vector2(0f, 0f), Color.WHITE)
+            DrawTextureRec(screenCamera1.Texture, splitScreenRect, Vector2(0f, 0f), Color.White)
 
             DrawTextureRec(
                 screenCamera2.Texture,
                 splitScreenRect,
                 Vector2(float32 (screenWidth / 2), 0.0f),
-                Color.WHITE
+                Color.White
             )
 
-            DrawRectangle(GetScreenWidth() / 2 - 2, 0, 4, GetScreenHeight(), Color.LIGHTGRAY)
+            DrawRectangle(GetScreenWidth() / 2 - 2, 0, 4, GetScreenHeight(), Color.LightGray)
 
             EndDrawing()
 

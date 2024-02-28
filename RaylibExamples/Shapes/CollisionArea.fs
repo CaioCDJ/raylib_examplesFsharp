@@ -56,27 +56,27 @@ module CollisionArea =
             if collision then
                 boxCollision <- GetCollisionRec(boxA, boxB)
 
-            if not (not (IsKeyPressed(KeyboardKey.KEY_SPACE))) then
+            if not (not (IsKeyPressed(KeyboardKey.Space))) then
                 pause <- not pause
 
             BeginDrawing()
 
-            ClearBackground(Color.RAYWHITE)
+            ClearBackground(Color.RayWhite)
 
-            DrawRectangle(0, 0, screenWidth, screenUpperLimit, (if collision then Color.RED else Color.BLACK))
+            DrawRectangle(0, 0, screenWidth, screenUpperLimit, (if collision then Color.Red else Color.Black))
 
-            DrawRectangleRec(boxA, Color.GOLD)
-            DrawRectangleRec(boxB, Color.BLUE)
+            DrawRectangleRec(boxA, Color.Gold)
+            DrawRectangleRec(boxB, Color.Blue)
 
             if collision then
-                DrawRectangleRec(boxCollision, Color.LIME)
+                DrawRectangleRec(boxCollision, Color.Lime)
 
                 DrawText(
                     "COLLISION!!",
                     GetScreenWidth() / 2 - MeasureText("COLLISION!", 20) / 2,
                     screenUpperLimit / 2 - 10,
                     20,
-                    Color.BLACK
+                    Color.Black
                 )
                 //DrawText(TextFormat("Collision Area: %i", (int)boxCollision.width*(int)boxCollision.height), GetScreenWidth()/2 - 100, screenUpperLimit + 10, 20, BLACK);
                 let collisionAreaText = boxCollision.Width * boxCollision.Height
@@ -86,10 +86,10 @@ module CollisionArea =
                     GetScreenWidth() / 2 - 100,
                     screenUpperLimit + 10,
                     20,
-                    Color.BLACK
+                    Color.Black
                 )
 
-            DrawText("Press SPACE to PAUSE/RESUME", 20, screenHeight - 35, 20, Color.LIGHTGRAY)
+            DrawText("Press SPACE to PAUSE/RESUME", 20, screenHeight - 35, 20, Color.LightGray)
             DrawFPS(10, 10)
 
             EndDrawing()

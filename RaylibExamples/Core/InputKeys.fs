@@ -17,25 +17,25 @@ module InputKeys =
         SetTargetFPS(60)
 
         while not (WindowShouldClose()) do
-            if not (not (IsKeyDown(KeyboardKey.KEY_RIGHT))) then
+            if not (not (IsKeyDown(KeyboardKey.Right))) then
                 ballPosition.X <- ballPosition.X + 2.0f
 
-            if not (not (IsKeyDown(KeyboardKey.KEY_LEFT))) then
+            if not (not (IsKeyDown(KeyboardKey.Left))) then
                 ballPosition.X <- ballPosition.X - 2.0f
 
-            if not (not (IsKeyDown(KeyboardKey.KEY_UP))) then
+            if not (not (IsKeyDown(KeyboardKey.Up))) then
                 ballPosition.Y <- ballPosition.Y - 2.0f
 
-            if not (not (IsKeyDown(KeyboardKey.KEY_DOWN))) then
+            if not (not (IsKeyDown(KeyboardKey.Down))) then
                 ballPosition.Y <- ballPosition.Y + 2.0f
 
             BeginDrawing()
 
-            ClearBackground(Color.RAYWHITE)
+            ClearBackground(Color.RayWhite)
 
-            DrawText("move the ball with arrow keys", 10, 10, 20, Color.DARKGRAY)
+            DrawText("move the ball with arrow keys", 10, 10, 20, Color.DarkGray)
 
-            DrawCircleV(ballPosition, 50f, Color.MAROON)
+            DrawCircleV(ballPosition, 50f, Color.Maroon)
 
             EndDrawing()
 

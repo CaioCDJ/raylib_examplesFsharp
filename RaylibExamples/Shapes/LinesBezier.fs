@@ -12,7 +12,7 @@ module LinesBezier =
         let screenWidth = 800
         let screenHeight = 450
 
-        SetConfigFlags(ConfigFlags.FLAG_MSAA_4X_HINT)
+        SetConfigFlags(ConfigFlags.Msaa4xHint)
 
         InitWindow(screenWidth, screenHeight, "raylib [shapes] example - cubic-bezier lines")
 
@@ -31,34 +31,34 @@ module LinesBezier =
 
             if
                 CheckCollisionPointCircle(mouse, startPoint, 10f)
-                && IsMouseButtonDown(MouseButton.MOUSE_BUTTON_LEFT)
+                && IsMouseButtonDown(MouseButton.Left)
             then
                 moveStartPoint <- true
             else if
                 CheckCollisionPointCircle(mouse, endpoint, 10f)
-                && IsMouseButtonDown(MouseButton.MOUSE_BUTTON_LEFT)
+                && IsMouseButtonDown(MouseButton.Left)
             then
                 moveEndpoint <- true
 
             if moveStartPoint then
                 startPoint <- mouse
 
-                if not (not (IsMouseButtonReleased(MouseButton.MOUSE_BUTTON_LEFT))) then
+                if not (not (IsMouseButtonReleased(MouseButton.Left))) then
                     moveStartPoint <- false
 
             if moveEndpoint then
                 endpoint <- mouse
 
-                if not (not (IsMouseButtonReleased(MouseButton.MOUSE_BUTTON_LEFT))) then
+                if not (not (IsMouseButtonReleased(MouseButton.Left))) then
                     moveEndpoint <- false
 
             BeginDrawing()
 
-            ClearBackground(Color.RAYWHITE)
+            ClearBackground(Color.RayWhite)
 
-            DrawText("MOVE START-END POINTS WITH MOUSE", 15, 20, 20, Color.GRAY)
+            DrawText("MOVE START-END POINTS WITH MOUSE", 15, 20, 20, Color.Gray)
 
-            DrawLineBezier(startPoint, endpoint, 5.0f, Color.BLUE)
+            DrawLineBezier(startPoint, endpoint, 5.0f, Color.Blue)
 
             DrawCircleV(
                 startPoint,
@@ -68,7 +68,7 @@ module LinesBezier =
                     else
                         8
                 ),
-                if moveStartPoint then Color.RED else Color.BLUE
+                if moveStartPoint then Color.Red else Color.Blue
             )
 
             DrawCircleV(
@@ -79,7 +79,7 @@ module LinesBezier =
                     else
                         8
                 ),
-                if moveEndpoint then Color.RED else Color.BLUE
+                if moveEndpoint then Color.Red else Color.Blue
             )
 
             EndDrawing()

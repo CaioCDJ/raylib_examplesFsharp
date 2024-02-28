@@ -17,9 +17,9 @@ module basicWindow =
         while not (WindowShouldClose()) do
 
             BeginDrawing()
-            ClearBackground(Raylib_cs.Color.RAYWHITE)
+            ClearBackground(Raylib_cs.Color.RayWhite)
 
-            DrawText("I will not say hello world for the 100th time", 190, 200, 20, Raylib_cs.Color.MAGENTA)
+            DrawText("I will not say hello world for the 100th time", 190, 200, 20, Raylib_cs.Color.Magenta)
 
             EndDrawing()
 

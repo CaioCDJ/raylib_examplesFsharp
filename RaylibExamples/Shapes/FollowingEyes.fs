@@ -70,15 +70,15 @@ module FollowingEyes =
 
             BeginDrawing()
 
-            ClearBackground(Color.RAYWHITE)
+            ClearBackground(Color.RayWhite)
 
-            DrawCircleV(scleraLeftPosition, sleraRadius, Color.LIGHTGRAY)
-            DrawCircleV(irisLeftPosition, irisRadius, Color.BROWN)
-            DrawCircleV(irisLeftPosition, 10f, Color.BLACK)
+            DrawCircleV(scleraLeftPosition, sleraRadius, Color.LightGray)
+            DrawCircleV(irisLeftPosition, irisRadius, Color.Brown)
+            DrawCircleV(irisLeftPosition, 10f, Color.Black)
 
-            DrawCircleV(scleraRightPosition, sleraRadius, Color.LIGHTGRAY)
-            DrawCircleV(irisRightPosition, irisRadius, Color.DARKGREEN)
-            DrawCircleV(irisRightPosition, 10f, Color.BLACK)
+            DrawCircleV(scleraRightPosition, sleraRadius, Color.LightGray)
+            DrawCircleV(irisRightPosition, irisRadius, Color.DarkGreen)
+            DrawCircleV(irisRightPosition, 10f, Color.Black)
 
             DrawFPS(10, 10)
 

@@ -30,21 +30,21 @@ module InputMultitouch =
 
             BeginDrawing()
 
-            ClearBackground(Color.RAYWHITE)
+            ClearBackground(Color.RayWhite)
 
             for i in 0 .. tCount - 1 do
                 if touchPositions.[i].X > 0f && touchPositions.[i].Y > 0f then
-                    DrawCircleV(touchPositions.[i], 34f, Color.ORANGE)
+                    DrawCircleV(touchPositions.[i], 34f, Color.Orange)
 
                     DrawText(
                         $"{i}",
                         int (touchPositions.[i].X - 10f),
                         int (touchPositions.[i].Y - 70f),
                         40,
-                        Color.BLACK
+                        Color.Black
                     )
 
-            DrawText("touch the screen at multiple locations to get multiple balls", 10, 10, 20, Color.DARKGRAY)
+            DrawText("touch the screen at multiple locations to get multiple balls", 10, 10, 20, Color.DarkGray)
 
             EndDrawing()
 
