@@ -1,5 +1,5 @@
 ﻿open Raylib_cs
-open RaylibExamples.Core
+open RaylibExamples
 open Spectre.Console
 open System
 
@@ -30,23 +30,29 @@ let main Void =
                     [| "Basic Window"
                        "Basic Screen Manager"
                        "2d camera"
-                       "2d Camera Split Screen"
+                       "2d Camera Split screen"
+                       "3d camera first person"
+                       "3d camera free"
                        "3d Camera Mode"
                        "Input keys"
                        "Input Mouse"
-                       "Input Multi Touch" |]
+                       "Input Multi Touch" 
+                       "go back"
+                       |]
                 )
 
             match example with
-            | "Basic Window" -> RaylibExamples.Core.basicWindow.run ()
-            | "Basic Screen Manager" -> RaylibExamples.Core.BasicScreenManager.Main()
-            | "2d camera" -> RaylibExamples.Core.Camera2dDemo.run ()
-            | "2d Camera Split Screen" -> RaylibExamples.Core.CameraSpit2d.run
-            | "3d Camera Mode" -> RaylibExamples.Core.CameraMode3d.run
-            | "Input keys" -> RaylibExamples.Core.InputKeys.run
-            | "Input Mouse" -> RaylibExamples.Core.InputMouse.run
-            | "Input Multi Touch" -> RaylibExamples.Core.InputMultitouch.run
-            | _ -> ()
+            | "Basic Window" -> Core.basicWindow.run ()
+            | "Basic Screen Manager" -> Core.BasicScreenManager.Main()
+            | "2d camera" -> Core.Camera2dDemo.run ()
+            | "2d Camera Split Screen" -> Core.CameraSpit2d.run
+            | "3d camera first person"-> Core._3dCameraFirstPerson.run
+            | "3d Camera Mode" -> Core.CameraMode3d.run
+            | "3d camera free"-> Core.CameraFree3d.run
+            | "Input keys" -> Core.InputKeys.run
+            | "Input Mouse" -> Core.InputMouse.run
+            | "Input Multi Touch" -> Core.InputMultitouch.run
+            | _ |"go back"-> ()
         | "Shapes" ->
             let example =
                 gemMenu (
@@ -59,20 +65,22 @@ let main Void =
                        "Rectangle Scaling"
                        "lines bezier"
                        "Collision Area" 
-                       "Following Eyes"|]
+                       "Following Eyes"
+                       "go back"
+                       |]
                 )
 
             match example with
-            | "Basic Shapes" -> RaylibExamples.Shapes.BasicShapes.run
-            | "Bouncing ball" -> RaylibExamples.Shapes.BouncingBall.run
-            | "colors Palette" -> RaylibExamples.Shapes.ColorsPalette.run
-            | "Raylib Logo" -> RaylibExamples.Shapes.Rayliblogo.run
-            | "Raylib Logo Animations" -> RaylibExamples.Shapes.RayliblogoAnimation.run
-            | "Rectangle Scaling" -> RaylibExamples.Shapes.RetangleScaling.run
-            | "lines bezier" -> RaylibExamples.Shapes.LinesBezier.run
-            | "Collision Area" -> RaylibExamples.Shapes.CollisionArea.run
-            |"Following Eyes" -> RaylibExamples.Shapes.FollowingEyes.run 
-            | _ -> ()
+            | "Basic Shapes" -> Shapes.BasicShapes.run
+            | "Bouncing ball" -> Shapes.BouncingBall.run
+            | "colors Palette" -> Shapes.ColorsPalette.run
+            | "Raylib Logo" -> Shapes.Rayliblogo.run
+            | "Raylib Logo Animations" -> Shapes.RayliblogoAnimation.run
+            | "Rectangle Scaling" -> Shapes.RetangleScaling.run
+            | "lines bezier" -> Shapes.LinesBezier.run
+            | "Collision Area" -> Shapes.CollisionArea.run
+            |"Following Eyes" -> Shapes.FollowingEyes.run 
+            | _ |"go back"-> ()
         | _ -> ()
 
     0
