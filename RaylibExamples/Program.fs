@@ -34,6 +34,8 @@ let main Void =
                        "3d camera first person"
                        "3d camera free"
                        "3d Camera Mode"
+                       "3d camera split screen"
+                       "3d picking"
                        "Input keys"
                        "Input Mouse"
                        "Input Multi Touch" 
@@ -49,6 +51,8 @@ let main Void =
             | "3d camera first person"-> Core._3dCameraFirstPerson.run
             | "3d Camera Mode" -> Core.CameraMode3d.run
             | "3d camera free"-> Core.CameraFree3d.run
+            | "3d camera split screen"-> Core._3dCameraSplitScreen.run
+            | "3d picking" -> Core._3dPicking.run
             | "Input keys" -> Core.InputKeys.run
             | "Input Mouse" -> Core.InputMouse.run
             | "Input Multi Touch" -> Core.InputMultitouch.run
@@ -66,6 +70,7 @@ let main Void =
                        "lines bezier"
                        "Collision Area" 
                        "Following Eyes"
+                       "easings ball anim"
                        "go back"
                        |]
                 )
@@ -80,6 +85,7 @@ let main Void =
             | "lines bezier" -> Shapes.LinesBezier.run
             | "Collision Area" -> Shapes.CollisionArea.run
             |"Following Eyes" -> Shapes.FollowingEyes.run 
+            | "easings ball anim"-> Shapes.EasingsBall.run
             | _ |"go back"-> ()
         | _ -> ()
 
