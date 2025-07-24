@@ -19,8 +19,8 @@ let main Void =
         AnsiConsole.Write(new Rule())
 
         let mutable mainMenuOption =
-            gemMenu ("Select the Raylib category of example:", [| "Core"; "Shapes"; "Exit" |])
-
+            gemMenu ("Select the Raylib category of example:", [| "Core"; "Shapes";"Audio" ;"Exit" |])
+        
         match mainMenuOption with
         | "Exit" -> Environment.Exit(0)
         | "Core" ->
@@ -86,6 +86,17 @@ let main Void =
             | "Collision Area" -> Shapes.CollisionArea.run
             |"Following Eyes" -> Shapes.FollowingEyes.run 
             | "easings ball anim"-> Shapes.EasingsBall.run
+            | _ |"go back"-> ()
+        | "Audio" -> 
+            let example = 
+                gemMenu(
+                    "Select the Example",
+                    [|"module playing"; "music playing" |]
+                    )
+
+            match example with
+            | "module playing"-> Audio.ModulePlaying.run
+            | "music playing"-> Audio.MusicPlaying.run
             | _ |"go back"-> ()
         | _ -> ()
 
