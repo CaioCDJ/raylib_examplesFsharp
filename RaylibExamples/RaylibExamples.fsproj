@@ -12,6 +12,8 @@
 
     <Compile Include="./Audio/ModulePlaying.fs"/>
     <Compile Include="./Audio/MusicPlaying.fs"/>
+    <Compile Include="./Audio/SoundLoading.fs"/>
+    <Compile Include="./Audio/PlayingSoundMultipleTimes.fs"/>
 
     <Compile Include="./Core/BasicWindow.fs" />
     <Compile Include="./Core/BasicGreenScreen.fs" />

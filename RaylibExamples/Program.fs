@@ -22,7 +22,7 @@ let main Void =
             gemMenu ("Select the Raylib category of example:", [| "Core"; "Shapes";"Audio" ;"Exit" |])
         
         match mainMenuOption with
-        | "Exit" -> Environment.Exit(0)
+        | "Exit" -> Environment.Exit 0
         | "Core" ->
             let example =
                 gemMenu (
@@ -91,12 +91,15 @@ let main Void =
             let example = 
                 gemMenu(
                     "Select the Example",
-                    [|"module playing"; "music playing" |]
+                    [|"module playing"; 
+                    "music playing"; "Sound loading and playing" ;"Playing sound multiple times"|]
                     )
 
             match example with
             | "module playing"-> Audio.ModulePlaying.run
             | "music playing"-> Audio.MusicPlaying.run
+            | "Sound loading and playing"-> Audio.SoundLoading.run
+            | "Playing sound multiple times"-> Audio.PlayingSoundMultipleTimes.run
             | _ |"go back"-> ()
         | _ -> ()
 
